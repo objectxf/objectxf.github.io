@@ -1,15 +1,302 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Artem Litvinov</title>
+    <style>
+        @font-face {
+            font-family: JetBrains;
+            src: url(/fonts/JetBrainsMono-Light.ttf);
+        }
+        @font-face {
+            font-family: Merriweather;
+            src: url(/fonts/Merriweather-Regular.ttf);
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            height: 100%;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 100%;
+            min-height: 100vh;
+            gap: 20px;
+            width: 100%;
+        }
+
+        .left {
+            background: #fff;
+            padding: 11% 6% 3% 11%;
+            display: grid;
+            gap: 1.5rem;
+            max-width: 100%;
+        }
+
+        .left h1 {
+            font-size: 2.6rem;
+            color: #333;
+            font-family: Merriweather;
+        }
+        .left h2 {
+            font-size: 2rem;
+            color:#868e96;
+            font-family:JetBrains;
+        }
+        .left h3 {
+            font-size: 2.2rem;
+            color:#868e96;
+            font-family:JetBrains;
+        }
+        .left h4{
+            font-size: 2.2rem;
+            font-family: Merriweather;
+        }
+        .left h5{
+            font-size: 1.7rem;
+            font-family: Merriweather;
+        }
+        .left p {
+            font-size: 1.25rem;
+            color: #666;
+            max-width: 40vw;
+        }
+        .gallery img{
+            max-width: 40vw;
+        }
+        .left div {
+            max-width: 40vw;
+        }
+        .right {
+            /* background: url('img23.png') no-repeat center center/cover; */
+            height: 100%;
+            background: #050505;
+        }
+        .right img {
+            width: 100%;
+        }
+        .telegram {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 5px
+        }
+        .ico {
+            width: 40px;
+            height: 40px;
+        }
+        .EZN {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            gap: 10px;
+        }
+        .EZN img {
+            height: 70px;
+            width: auto;
+        }
+        .link {
+            color: #F73859;
+            font-family: JetBrains;
+            font-size: 1.7rem;
+        }
+        .line {
+            background: black;
+            width: 100%;
+            height: 1px;
+        }
+        .gallery {
+            display: grid;
+            align-items: center;
+            gap: 1rem;
+        }
+        .gallery img {
+            height: 200px;
+            width: auto;
+        }
+        footer {
+            grid-column: span 2;
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+        #lang {
+            font-size: 1.7rem;
+        }
+        .pisya {
+            display: flex;
+            gap: 10px;
+            columns: #5E5E5E;
+        }
+        .pisya div{
+            font-family: JetBrains;
+        }
+        .finallykurwa a{
+            color: #F73859;
+        }
+        .finallykurwa {
+            font-size: 1.6rem;
+            display: flex;
+            justify-content:space-between;
+            align-items: center;
+            height: 150px;
+            flex-direction: column;
+            font-family: JetBrains;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            body {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto;
+                /* font-size: ; */
+                width: 100vw;
+
+            }
+            .left {
+                max-width: 100%;
+                padding: 5% 4% 4% 5%;
+                order: 1;
+                width: 100vw;
+                grid-template-columns: repeat(auto-fit, minmax(min-content, fit-content(90%)));
+            }
+            .EZN {
+                
+            }
+            .right {
+                /* height: 100vh;
+                position: fixed;
+                right: 0;
+                top: 0; */
+                order: 0;
+                width: 100%;
+                height: 50vh;
+                /* display: flex;
+                align-items: center;
+                justify-content: center; */
+            }
+            .right img {
+                width: 100vw;
+            }
+            body{
+                grid-template-columns: 1fr;
+            }
+            .left h1 {
+                font-size: 21px;
+            }
+            .left h2 {
+                font-size: 19px;
+            }
+            .left h3 {
+                font-size: 18px;
+            }
+            .left h4 {
+                font-size: 19px;
+            }
+            .left h5 {
+                font-size: 17px;
+            }
+            .left p {
+                font-size: 14px;
+                max-width: 92vw;
+            }
+            .left div {
+                max-width: 92vw;
+            }
+            .EZN img {
+                display: none;
+            }
+            .left a{
+                font-size: 16px;
+            }
+            .left .pisya div {
+                font-size: 15px;
+            }
+            .pisya {
+                max-width: 100%;
+                flex-wrap: wrap;
+                flex-direction: column;
+            }
+            .gallery img {
+                max-width: 85vw;
+                margin: auto;
+            }
+            .finallykurwa {
+                font-size: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1 style="text-align: center;font-size: 45px;">SIEMA KURWY</h1>
-    <img src="https://m.media-amazon.com/images/I/412tw4eAdLL._SY445_SX342_.jpg" alt="PORN_IMAGE" style="margin: auto;display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;">
+    <div class="left">
+        <h3>Hello! my name is</h3>
+        <h1>Artem Litvinov</h1>
+        <h3>In short, I am a clown and</h3>
+        <h2>In details:</h2>
+        <p class="def">I focus on <b>web development</b> as a <b>front-end developer</b>, creating and implementing IT solutions that support business growth. My projects aim to attract new customers, improve the accuracy of search engine results through <b>SEO optimization</b>, expand the customer base, and effectively advertise services online..</p>
+        <p><a class="link" href="mailto:artempoland223@gmail.com">artempoland223@gmail.com</a></p>
+        <div class="telegram">
+            <img src="img/tg.png" alt="" class="ico">
+            <p class="link">
+                <a class="linkwithico link" href="https://www.blacked.com/">Telegram</a>
+            </p>
+        </div>
+        <h4>My Education</h4>
+        <span class="line"></span>
+        <h5>EZN | Elektroniczne Zakłady Naukowe</h5>
+        <div class="EZN">
+            <img src="img/ezn.png" alt="">
+            <p>
+                Currently, I am a third-year student at EZN (Elektroniczne Zakłady Naukowe) in Wrocław, Poland, where I am pursuing a vocational high school diploma as a Technician in Information Technology. 
+                I have gained foundational knowledge in computers and programming, learning various programming languages such as SQL, C++, HTML, CSS, and JavaScript. I am eager to apply my skills and knowledge in the field of web development and IT solutions.
+            </p>
+        </div>
+        <span class="line"></span>
+        <h4>Some info kurwa</h4>
+        <p>
+            My passion for informatics has been evident since childhood, and I have a deep enthusiasm for technology. I am eager to apply my skills and knowledge in the field of web development and IT solutions.
+        </p>
+        <div class="gallery">
+            <img src="img/dota.png" alt="">
+            <!-- <img src="steam.png" alt=""> -->
+        </div>
+        <h4 id="lang">Languages</h4>
+        <div class="pisya">
+            <div>[Ukrainian]</div>
+            <div>[Russian]</div>
+            <div>[English B2]</div>
+            <div>[Polish B2]</div>
+            <div>[German A1]</div>
+            <div>[Toxic C4]</div>
+        </div>
+        <span class="line"></span>
+        <div class="finallykurwa">
+            <div>
+                Do you have interesting projects and good financing?
+                <b><a href="https://www.blacked.com/">text me</a></b>, let's be friends <b>(no homo pls)</b>
+            </div>
+            <div>
+                Artem Litvinov @2024
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <img src="img/img23.png" alt="">
+    </div>
+    <!-- <footer>
+        <p>&copy; 2024 Artem Litvinov</p>
+    </footer> -->
 </body>
 </html>
